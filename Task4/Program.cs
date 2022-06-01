@@ -1,2 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Не используя рекурсию, выведите первые N чисел
+// Фибоначчи. Первыедва числа Фибонначи: 0 и 1.
+// Если N = 5 -> 01123
+// Если N = 3 -> 011
+// Если N = 7 -> 0112358
+
+void Funct(int num)
+{
+    int a = 0;
+    int b = 1;
+
+    for (int i = 0; i < num; i++)
+    {
+        Console.Write($"{a} ");
+        (a, b) = (b, a + b);
+    }
+}
+Funct(9);
