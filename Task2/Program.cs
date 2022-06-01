@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая принимает на вход три числа и
+// проверяет, может ли существовать треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника меньше
+// суммы двух других сторон.
+
+string CheckTriangle(int a, int b, int c)
+{
+    if (a < b + c && b < a + c && c < a + b) return "Yes";
+    return "No";
+}
+Console.WriteLine(CheckTriangle(1, 2, 3));
